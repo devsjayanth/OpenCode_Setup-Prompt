@@ -1,65 +1,4 @@
-# **Universal Coding Agent Setup — V4**
-
-This version should not be an OpenCode configuration with compatibility added afterward. It should be an **agent-independent engineering framework** that adapts itself to whichever coding agent you use.
-
-It should support OpenCode, Claude Code, Codex, Cursor, Gemini CLI, Windsurf, Cline, Roo Code, GitHub Copilot, Aider, Kiro, Antigravity and other compatible coding agents.
-
-The biggest improvement is replacing the linear development workflow with an **adaptive, intent-driven development lifecycle**.
-
-A typical vibe coder does not follow a formal SDLC. They change their mind, experiment, request reviews halfway through, provide screenshots, discover new requirements, revisit previous decisions, encounter errors and sometimes want to undo everything that happened in the last stage.
-
-The agent should handle all of this naturally, without requiring the user to understand software engineering terminology or manage individual tools.
-
-## **1. Universal development lifecycle**
-
-Every meaningful request follows the same underlying principle: **understand → act appropriately → verify → preserve what works → learn.**
-
-Review, redesign, testing, debugging and optimization are not restricted to the beginning or end of a project. They can occur at any time.
-
-## **2. How the agent should interpret everyday requests**
-
-| What you say                        | What the agent should do                                                  |
-| ----------------------------------- | ------------------------------------------------------------------------- |
-| "Build this for me"                 | Create a functional proof of concept and demonstrate it.                  |
-| "I have an idea"                    | Help establish the intended outcome without prematurely building.         |
-| "Looks good"                        | Approve the current working baseline, without making unsolicited changes. |
-| "Change this part"                  | Make a focused modification and verify existing functionality.            |
-| "Make it look like this screenshot" | Interpret the visual requirements and preserve unrelated behavior.        |
-| "Review this once"                  | Perform a read-only review and report findings.                           |
-| "Review and fix everything"         | Review, prioritize, fix and verify issues incrementally.                  |
-| "Is there a better way?"            | Evaluate alternatives without automatically rewriting the implementation. |
-| "Make it faster"                    | Establish a performance baseline, optimize and measure the improvement.   |
-| "It's not working"                  | Investigate the root cause instead of guessing.                           |
-| "It was working before"             | Investigate regressions against the last verified baseline.               |
-| "Undo the last change"              | Safely reverse the relevant change without losing unrelated work.         |
-| "I changed my mind"                 | Update the requirements and assess what can be reused.                    |
-| "Start over"                        | Preserve recoverable work and rebuild only the intended scope.            |
-| "Continue from yesterday"           | Recover project state and resume the appropriate stage.                   |
-| "Add this feature"                  | Integrate it without breaking previously accepted functionality.          |
-| "Make it production-ready"          | Perform applicable final hardening and verification.                      |
-| "How does this work?"               | Explain it without modifying code.                                        |
-| "Do whatever is best"               | Exercise independent engineering judgment within the authorized scope.    |
-| "Give me the full code"             | Deliver complete, usable code rather than disconnected fragments.         |
-
-## **3. Cross-agent compatibility**
-
-Different coding agents use different configuration files, skill discovery mechanisms, plugins and permission models. OpenCode, Claude Code, Cursor, Codex and Gemini CLI all provide customization mechanisms, but they are not interchangeable.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://opencode.ai\&sz=32)
-
-OpenCode+4
-
-
-
-The universal prompt must therefore use a **shared engineering policy with agent-specific adapters**, rather than forcing OpenCode plugins into every environment.
-
-Also, the extensions can be free and local without the coding agent itself being free or local. Some agents require hosted inference or an account. The setup must detect this limitation instead of falsely claiming complete offline operation.
-
-# **4. Complete Universal Coding Agent Setup Prompt**
-
-Copy this entire prompt into whichever coding agent you want to configure. It is self-contained and does not depend on the previous OpenCode-specific prompts.
-
-# Universal Autonomous Software Engineering Agent — Global Setup V4
+# 10x Engineer — Setup V4
 
 ## 1. Primary objective
 
@@ -289,21 +228,21 @@ Detect and configure the supported mechanisms for each agent.
 
 Examples to verify against the installed version:
 
-| Agent          | Typical instruction or configuration mechanism                    |
-| -------------- | ----------------------------------------------------------------- |
-| OpenCode       | Global AGENTS.md, skills, plugins, MCP                            |
-| Claude Code    | CLAUDE.md, skills, settings, hooks, MCP                           |
-| Codex          | AGENTS.md, skills, config.toml, supported hooks                   |
-| Gemini CLI     | GEMINI.md, skills, settings, extensions                           |
-| Cursor         | User Rules, project rules, skills, MCP                            |
-| Antigravity    | Supported global rules and skill mechanisms                       |
+| Agent | Typical instruction or configuration mechanism |
+|---|---|
+| OpenCode | Global AGENTS.md, skills, plugins, MCP |
+| Claude Code | CLAUDE.md, skills, settings, hooks, MCP |
+| Codex | AGENTS.md, skills, config.toml, supported hooks |
+| Gemini CLI | GEMINI.md, skills, settings, extensions |
+| Cursor | User Rules, project rules, skills, MCP |
+| Antigravity | Supported global rules and skill mechanisms |
 | GitHub Copilot | Custom instructions, AGENTS.md, skills and supported integrations |
-| Windsurf       | Global and workspace rules, supported skills                      |
-| Cline          | Global rules, supported skills and MCP                            |
-| Roo Code       | Global rules, custom instructions and supported skills            |
-| Kiro           | Steering files, skills and supported integrations                 |
-| Aider          | Supported conventions and configuration                           |
-| Other agents   | Discover the current native mechanism                             |
+| Windsurf | Global and workspace rules, supported skills |
+| Cline | Global rules, supported skills and MCP |
+| Roo Code | Global rules, custom instructions and supported skills |
+| Kiro | Steering files, skills and supported integrations |
+| Aider | Supported conventions and configuration |
+| Other agents | Discover the current native mechanism |
 
 These are compatibility hints, not guaranteed paths or schemas.
 
@@ -379,7 +318,7 @@ Required component.
 
 Official upstream:
 
-[https://github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
+https://github.com/JuliusBrussee/caveman
 
 Use the current official installation method for the detected coding agent.
 
@@ -422,7 +361,7 @@ Required component.
 
 Official upstream:
 
-[https://github.com/obra/superpowers](https://github.com/obra/superpowers)
+https://github.com/obra/superpowers
 
 Install the complete compatible engineering skill library.
 
@@ -471,7 +410,7 @@ Retain its engineering capabilities without imposing unnecessary process overhea
 
 Official upstream:
 
-[https://github.com/DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)
+https://github.com/DietrichGebert/ponytail
 
 Install the official Ponytail skill.
 
@@ -500,7 +439,7 @@ Minimize implementation complexity, not intelligence.
 
 Official upstream:
 
-[https://github.com/colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
+https://github.com/colbymchenry/codegraph
 
 Install using its current supported method.
 
@@ -532,7 +471,7 @@ Verify relevant source code directly when structural indexes are stale or incomp
 
 Official upstream:
 
-[https://github.com/rtk-ai/rtk](https://github.com/rtk-ai/rtk)
+https://github.com/rtk-ai/rtk
 
 Install using the supported package manager or inspected official release.
 
@@ -667,16 +606,16 @@ Allow locally usable technical guidance about cloud and hosted technologies.
 
 Evaluate and verify:
 
-- [https://github.com/obra/superpowers](https://github.com/obra/superpowers)
-- [https://github.com/addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
-- [https://github.com/farmage/opencode-skills](https://github.com/farmage/opencode-skills)
-- [https://github.com/morganlinton/BeautifulRust](https://github.com/morganlinton/BeautifulRust)
-- [https://github.com/ludo-technologies/python-best-practices](https://github.com/ludo-technologies/python-best-practices)
-- [https://github.com/vaquarkhan/data-engineering-agent-skills](https://github.com/vaquarkhan/data-engineering-agent-skills)
-- [https://github.com/confluentinc/agent-skills](https://github.com/confluentinc/agent-skills)
-- [https://github.com/NVIDIA/skills](https://github.com/NVIDIA/skills)
-- [https://github.com/huggingface/skills](https://github.com/huggingface/skills)
-- [https://github.com/wshobson/agents](https://github.com/wshobson/agents)
+- https://github.com/obra/superpowers
+- https://github.com/addyosmani/agent-skills
+- https://github.com/farmage/opencode-skills
+- https://github.com/morganlinton/BeautifulRust
+- https://github.com/ludo-technologies/python-best-practices
+- https://github.com/vaquarkhan/data-engineering-agent-skills
+- https://github.com/confluentinc/agent-skills
+- https://github.com/NVIDIA/skills
+- https://github.com/huggingface/skills
+- https://github.com/wshobson/agents
 
 Discover verified maintained upstream collections for:
 
@@ -779,7 +718,7 @@ Create a portable skill named:
 
 Use valid Agent Skills frontmatter:
 
-```
+```yaml
 ---
 name: master-orchestrator
 description: Automatically coordinates software engineering tasks, including building, debugging, reviewing, redesigning, changing requirements, incremental refinement, regression verification, recovery, production hardening and local learning. Adapts to natural-language requests while preserving the model's independent reasoning.
@@ -1449,7 +1388,7 @@ Create a portable skill named:
 
 Use valid YAML frontmatter:
 
-```
+```yaml
 ---
 name: self-improving-agent
 description: Automatically learns from validated user feedback, corrections, failures, successful solutions, project decisions and recurring workflows. Maintains isolated local persistent memory and improves future engineering behavior without unrestricted self-modification.
@@ -1717,7 +1656,7 @@ Use native directories where available.
 
 Conceptually maintain:
 
-```
+```text
 agent-global-configuration/
 ├── native-agent-config
 ├── global-instructions
@@ -1947,133 +1886,3 @@ The implementation must remain as simple as reasonably possible.
 The final outcome must satisfy the user's actual requirements.
 
 **Understand → Make it work → Show it working → Accept feedback → Change intelligently → Review anytime → Verify continuously → Preserve what works → Harden when appropriate → Learn persistently.**
-
-## **5. Why V4 is better than the previous versions**
-
-| Capability                      | V3                  | V4                                         |
-| ------------------------------- | ------------------- | ------------------------------------------ |
-| Agent compatibility             | Primarily OpenCode  | Agent-independent                          |
-| Development lifecycle           | Progressive stages  | Dynamic, non-linear lifecycle              |
-| Beginner-friendly operation     | Partial             | Foundational                               |
-| Mid-development reviews         | Available           | Dedicated adaptive workflow                |
-| Changing requirements           | Incremental changes | Explicit requirement reconciliation        |
-| Changing one's mind             | Limited             | Supported throughout                       |
-| Rejected implementations        | Limited             | Recovery and learning                      |
-| Undo and rollback               | Basic checkpoints   | Targeted recovery                          |
-| Session continuity              | Persistent memory   | Memory plus project state                  |
-| Existing projects               | Basic inspection    | Baseline and pre-existing issue detection  |
-| Screenshots and design requests | Basic               | Dedicated visual workflow                  |
-| Performance optimization        | General             | Measurement-based                          |
-| Review-only requests            | Implicit            | Read-only by default                       |
-| Interruptions                   | Limited             | Safe task reconciliation                   |
-| Approval handling               | Stage-based         | Context-aware                              |
-| Model intelligence              | Protected           | Protected across all workflows             |
-| Self-improvement                | Continuous          | Continuous and evidence-based              |
-| Local compatibility             | OpenCode-centric    | Native integrations and portable fallbacks |
-
-## **6. The most important addition: preserving accepted behavior**
-
-Consider a development session like this:
-
-1. **"Build me a security monitoring pipeline."**
-
-   Creates a working pipeline and verifies actual scan execution.
-2. **"Looks good. Add an HTML email."**
-
-   Preserves scanning functionality, adds email generation and verifies both.
-3. **"Review the credentials once."**
-
-   Performs a security review without unnecessarily changing the pipeline.
-4. **"Fix the credential issues."**
-
-   Improves credential handling and verifies email delivery and scanning.
-5. **"Change the email design completely."**
-
-   Changes presentation while preserving security, scanning and delivery.
-6. **"Actually, bring back the previous design."**
-
-   Reverts the relevant visual changes without undoing credential improvements.
-7. **"Make the scanner faster."**
-
-   Investigates bottlenecks, optimizes execution and measures the results.
-8. **"Now review everything and make it production-grade."**
-
-   Performs final applicable testing, security review, error handling and production hardening.
-
-At every stage, the agent knows which functionality has been accepted, what is currently changing and what must not be broken.
-
-That is more valuable than simply installing hundreds of engineering skills.
-
-## **7. Final architecture**
-
-**Native model intelligence**
-
-Reasoning · Creativity · Engineering judgment
-
-**Adaptive Master Orchestrator**
-
-Intent · Scope · State · Skill selection
-
-Superpowers
-
-Engineering
-
-Ponytail
-
-Minimalism
-
-Caveman
-
-Communication
-
-CodeGraph
-
-Navigation
-
-RTK
-
-Shell efficiency
-
-Specialists
-
-Domain expertise
-
-**Adaptive engineering workflow**
-
-Build · Review · Change · Debug · Test · Recover · Harden
-
-**Persistent memory**
-
-Knowledge and project state
-
-**Self-improvement**
-
-Feedback and verified lessons
-
-Knowledge feeds future decisions
-
-Agent-specific compatibility layer
-
-OpenCode · Claude Code · Codex · Cursor · Gemini · Copilot · Other agents
-
-## **8. Final recommendations**
-
-I would consider V4 the canonical setup prompt rather than maintaining separate engineering philosophies for every coding agent.
-
-CodeGraph, RTK, Caveman, Superpowers and the Agent Skills standard already provide varying degrees of cross-agent compatibility. The adapter-based architecture takes advantage of that without assuming identical implementation mechanisms.&#x20;
-
-[image](https://www.google.com/s2/favicons?domain=https://github.com\&sz=32)
-
-GitHub+4
-
-
-
-There are three deliberate design decisions:
-
-- **Keep the installer comprehensive, but the runtime instructions lightweight.** This entire setup prompt should not be injected into every coding session.
-- **Make the agent autonomous in engineering, not unrestricted in permissions.** You should not have to micromanage technical decisions, but destructive operations still require appropriate authorization.
-- **Treat user feedback and verified functionality as the source of continuity.** The agent should remember what you accepted, understand what you changed and avoid repeating rejected approaches.
-
-I verified the principal upstream tools and cross-agent customization mechanisms, but have not executed this installation across every listed agent. Some specialist repositories still require discovery and validation during installation. Fully local inference and reliable automatic activation depend on the actual agent, model and supported integration interfaces.
-
-Ultimately, the best coding agent for your workflow is not one that blindly follows a methodology. It is one that understands what you are trying to achieve, independently chooses the right engineering practices, adapts when you change direction and delivers increasingly reliable software without losing the functionality you already approved.
