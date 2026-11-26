@@ -2,7 +2,9 @@
 
 ## 1. Mission
 
-Configure the coding agent I am currently using into an intelligent, autonomous, adaptive, token-efficient, continuously improving software engineering environment.
+Set up this newly installed coding agent now. This prompt is the installation request when pasted on its own as the first message. No separate install command or follow-up request is needed.
+
+Assume no prior setup, plugins, session history or user-specific preferences. Discover and preserve anything already present.
 
 Support current and future coding agents wherever technically compatible, including OpenCode, Claude Code, Codex, Cursor, Gemini CLI, Antigravity, GitHub Copilot, Windsurf, Cline, Roo Code, Kilo Code, Kiro, Aider, Continue, Pi and Zed.
 
@@ -12,7 +14,7 @@ Configure the current agent globally for use across existing and future projects
 
 Do not modify unrelated coding agents unless requested.
 
-Execute the actual setup using available terminal, filesystem and configuration tools. Do not merely provide installation instructions.
+Execute the setup using the tools available on the host. If the user explicitly asks only to review, explain or compare this prompt, inspect it without installing anything or changing the environment.
 
 The environment must combine:
 
@@ -156,8 +158,9 @@ Before modifying anything, detect:
 - Native memory and context management.
 - Existing configuration and installed integrations.
 - Available package managers and required runtimes.
-- CPU, GPU, RAM and available disk space.
-- Existing model providers and local inference options.
+- Active inference provider, if configured.
+
+Missing configuration files, empty skill directories and an absent memory store are normal on a fresh install. Check GPU, memory and other inference-specific requirements only when evaluating a local model; these checks are not prerequisites for installing skills.
 
 Verify current official documentation and supported integration methods.
 
@@ -173,7 +176,7 @@ Installation must be:
 - Free of unnecessary duplication.
 - Low-maintenance.
 
-Back up existing configurations before changing them.
+Back up only existing configurations that the installer will change. Record which paths and entries the installer creates so rollback can remove its own additions.
 
 Preserve user-authored instructions, credentials, provider settings and unrelated integrations.
 
@@ -186,6 +189,8 @@ Avoid permanent floating `@latest` dependencies.
 Use isolated temporary directories for downloading and inspection.
 
 If an optional component fails validation, disable that component, preserve the working environment and continue with independent capabilities.
+
+If a required capability fails, revert only the failed step's changes and try its documented fallback when available. If neither path passes the capability check, mark setup incomplete and continue only with independent steps.
 
 ## 6. Universal architecture
 
@@ -291,6 +296,14 @@ Treat local-only inference and local-only tooling as separate properties.
 Install and validate each capability individually.
 
 Assign a distinct responsibility to each component.
+
+For the three capabilities marked required below, validate behavior through the host's normal entry point. Use the same acceptance check for the preferred integration and its fallback:
+
+| Required capability | Preferred path | Fallback | Acceptance check |
+| --- | --- | --- | --- |
+| Caveman | Official native integration | Official portable skill with supported activation rules | A diagnostic summary is concise and preserves the supplied failing command and error. |
+| Superpowers | Compatible official native integration | Official portable skills selected by the Master Orchestrator | In fresh sessions, a simple explanation avoids formal planning and a failing-test task uses systematic debugging. |
+| Persistent local memory | Native local memory or a verified local integration | Project-scoped Markdown or SQLite | A fresh session retrieves a synthetic fact for the originating project; an unrelated project does not retrieve it. |
 
 ### 8.1 Caveman — required
 
@@ -469,7 +482,7 @@ Verify exact package ownership, compatibility and supported storage interfaces.
 
 Install only one primary memory implementation.
 
-For other agents, use compatible native local memory or portable Markdown or SQLite storage.
+If no compatible native memory or local integration is available, use project-scoped Markdown or SQLite storage on any host.
 
 Persist relevant:
 
@@ -1342,6 +1355,8 @@ Maintain a lightweight registry recording skill sources, revisions, domains, dep
 
 Maintain a setup manifest recording installed versions, configuration paths, enabled integrations, validation results and rollback locations.
 
+Record installer-owned changes and step status as setup progresses. On rerun, inspect actual state before resuming an interrupted step or skipping a verified one. Roll back owned changes individually; preserve later user edits and flag overlapping edits for manual resolution.
+
 Provide a simple idempotent health-check and repair mechanism using native tools where possible.
 
 Do not create unnecessary scheduled jobs, background agents or daemons.
@@ -1356,11 +1371,9 @@ Degrade gracefully when optional integrations are unavailable.
 
 Do not assume that adding a plugin or skill improves the agent.
 
-Before enabling optional optimization layers, establish a representative baseline using the original model and native agent capabilities.
+Immediately after discovery, before installing components or changing configuration, capture a representative baseline in a disposable project. Use a fresh session without the installer prompt. Record the agent version, model, provider, task prompts and starting project state.
 
-Use a disposable local project.
-
-Run a practical, bounded comparison using the same model and similar task conditions.
+After configuration, repeat the comparison in a fresh session with the same agent, model, provider, prompts and starting project state. If a comparable native run is unavailable or would incur unauthorized cost, report the functional checks separately and do not claim measured improvement.
 
 Test representative scenarios:
 
@@ -1380,6 +1393,14 @@ Test representative scenarios:
 14. Record and retrieve a validated synthetic learning event.
 
 Combine checks where efficient.
+
+Test the installer lifecycle in an isolated configuration, separate from the live user profile:
+
+1. Start without user configuration. Verify the required capabilities or report each unmet requirement.
+2. Interrupt setup after a configuration change, then rerun. Verify the interrupted step recovers without duplicate hooks, skill registrations or managed policy sections.
+3. Rerun a completed setup. Verify managed settings and registrations remain unchanged. Add an unrelated user setting, roll back setup, and verify the setting survives while installer-owned additions are removed.
+
+If the host cannot isolate a lifecycle test, mark it untested rather than running it against the live configuration.
 
 Evaluate:
 
@@ -1447,6 +1468,8 @@ After execution, provide a concise factual report containing:
 - Known limitations.
 - Backup and recovery information.
 
+Scope compatibility claims to the agent version, operating system and integration path actually tested. The agents listed in §1 and §6 are discovery candidates, not verified targets.
+
 Distinguish:
 
 - Installed and verified.
@@ -1460,12 +1483,12 @@ Do not claim complete success merely because files or packages exist.
 
 ## 22. Execution directive
 
-Execute the complete setup now.
+On a standalone first paste, begin with step 1 and proceed through the installation report. Reuse compatible native capabilities and install only what is needed to meet the requirements. An explicit review-only, explanation or comparison request takes the read-only path in §1.
 
 Proceed in this order:
 
 1. Detect the current environment and supported native mechanisms.
-2. Inspect and back up existing configuration.
+2. Capture the native baseline as described in §20, or record why it is unavailable. Then back up existing configuration that will change.
 3. Resolve local inference and provider compatibility.
 4. Install and validate core tools.
 5. Install Caveman, Superpowers and Ponytail.
@@ -1476,8 +1499,8 @@ Proceed in this order:
 10. Configure compact project continuity.
 11. Install the concise global engineering policy.
 12. Configure automatic capability activation.
-13. Validate native behavior and enhanced behavior.
-14. Resolve conflicts and evaluate optional context optimization.
+13. Validate required capabilities and resolve integration conflicts.
+14. Compare configured behavior against the saved baseline. Evaluate optional context optimization separately and test installer recovery as described in §20.
 15. Disable redundant or harmful components.
 16. Clean temporary artifacts.
 17. Provide the factual installation report.
